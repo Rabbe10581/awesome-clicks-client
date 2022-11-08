@@ -15,8 +15,8 @@ const Login = () => {
     }
 
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row-reverse">
+        <div className="hero w-full my-20">
+            <div className="hero-content flex-col lg:flex-row-reverse ">
 
                 <div className="card flex-shrink-0 lg:w-1/2 shadow-2xl bg-base-100 lg:py-14 lg:px-7">
                     <form onSubmit={handleLogIn} className="card-body">
@@ -36,10 +36,10 @@ const Login = () => {
                             </label>
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                            <button className="btn btn-secondary">Login</button>
                         </div>
                     </form>
-                    <p>New to Awesome Clicks? <Link to="/signup">Sign Up</Link></p>
+                    <p className='text-center'>New to Awesome Clicks? <Link className='text-secondary font-bold' to="/signup">Sign Up</Link></p>
                 </div>
                 <div className="text-center lg:w-1/2 lg:text-left">
                     <img className='w-full' src={loginImg} alt="" />
