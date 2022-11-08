@@ -1,9 +1,9 @@
 import React from 'react';
-import logo from '../../Assets/logo.png'
+import logo from '../../../Assets/logo.png'
 
 const Footer = () => {
     return (
-        <footer className="footer items-center p-4 bg-neutral text-neutral-content">
+        <footer className="footer items-center p-10 bg-black text-white">
             <div className="items-center grid-flow-col">
                 <img className='w-12' src={logo} alt="" />
                 <p>Copyright © 2022 - All right reserved</p>
