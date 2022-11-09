@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Wedding Photography",
+        "img": "https://i.ibb.co/6ZqcV3B/2.jpg",
+        "price": "20"
+    },
+    {
+        "title": "Fashion Photography",
+        "img": "https://i.ibb.co/YWKFVSL/fashion.jpg",
+        "price": "20"
+    },
+    {
+        "title": "Wild life Photography",
+        "img": "https://i.ibb.co/6wXNZ7p/wild.jpg",
+        "price": "20"
+    },
+    {
+        "title": "Journalism Photography",
+        "img": "https://i.ibb.co/pxbLzb2/3.jpg",
+        "price": "20"
+    },
+    {
+        "title": "Sports Photography",
+        "img": "https://i.ibb.co/JrGfwZ8/4.jpg",
+        "price": "20"
+    },
+    {
+        "title": "Nature Photography",
+        "img": "https://i.ibb.co/1n2XyJS/nature.jpg",
+        "price": "20"
+    }
+]

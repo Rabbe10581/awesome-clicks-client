@@ -4,7 +4,7 @@ import loginImg from "../../Assets/login/login.jpg"
 import { Link } from 'react-router-dom';
 
 const Login = () => {
-    // const str = useContext(AuthContext)
+    const { login } = useContext(AuthContext);
 
     const handleLogIn = event => {
         event.preventDefault();
@@ -12,6 +12,13 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         console.log(email, password);
+
+        login(email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+            })
+            .then(err => console.error(err))
     }
 
     return (
