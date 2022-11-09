@@ -5,14 +5,14 @@ const TopicsCard = ({ topic }) => {
     const { _id, img, price, title, details } = topic;
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
-            <figure><img src={img} alt="Shoes" /></figure>
+            <figure><img className='lg:h-72' src={img} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title text-3xl font-bold">{title}</h2>
                 <p className='text-2xl text-orange-600 font-semibold'>Price: <span>${price}</span></p>
                 <p>{details.slice(0, 100)}...</p>
                 <div className="card-actions justify-end">
-                    <Link to={`/checkout/${_id}`}>
-                        <button className="btn btn-secondary text-white">Checkout</button>
+                    <Link to={`/details/${_id}`}>
+                        <button className="btn btn-secondary text-white">Details</button>
                     </Link>
                 </div>
             </div>
