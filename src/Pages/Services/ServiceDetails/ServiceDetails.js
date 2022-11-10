@@ -1,11 +1,12 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Reviews from '../Reviews/Reviews';
 
 const ServiceDetails = () => {
     const { _id, img, price, title, details } = useLoaderData();
     return (
-        <div className="card card-side bg-base-100 shadow-xl">
-            <div>
+        <div>
+            <div className="card card-side bg-base-100 shadow-xl">
                 <div className='w-1/2'>
                     <figure><img className='w-full' src={img} alt="Movie" /></figure>
                 </div>
@@ -14,6 +15,9 @@ const ServiceDetails = () => {
                     <p><span>${price}</span> only of this package.</p>
                     <p>{details}</p>
                 </div>
+            </div>
+            <div className='bg-black py-16'>
+                <Reviews></Reviews>
             </div>
         </div>
     );
