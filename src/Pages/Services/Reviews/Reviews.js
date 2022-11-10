@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
@@ -7,6 +7,7 @@ const Reviews = () => {
     const { _id, title } = useLoaderData();
     console.log(_id);
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate();
     // console.log(user);
 
     const handleReview = event => {
@@ -53,6 +54,10 @@ const Reviews = () => {
 
 
     }
+    // Handle Login if user is not available
+    const handleLogIn = () => {
+        navigate("/login")
+    }
 
     return (
         <div className='text-center my-14'>
@@ -60,7 +65,16 @@ const Reviews = () => {
                 <div>
                     <textarea name='message' className="textarea textarea-info w-full max-w-xs" placeholder="Type your review here" required /><br />
                     <input name='email' type="email" defaultValue={user?.email} placeholder="Type here" className="input input-bordered input-error w-full max-w-xs my-3" readOnly /><br />
-                    <input type="submit" className="btn btn-accent text-white font-bold w-full max-w-xs mx-2" value="Post your Review" />
+                    {
+                        user?.email ?
+                            <>
+                                <input type="submit" className="btn btn-accent text-white font-bold w-full max-w-xs mx-2" value="Post your Review" />
+                            </>
+                            :
+                            <>
+                                <input onClick={handleLogIn} type="submit" className="btn btn-accent text-white font-bold w-full max-w-xs mx-2" value="Post your Review" />
+                            </>
+                    }
                 </div>
             </form>
             <ToastContainer></ToastContainer>

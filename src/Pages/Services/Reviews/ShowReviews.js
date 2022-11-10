@@ -13,8 +13,7 @@ const ShowReviews = ({ id }) => {
     }, [id])
 
     return (
-        <div className='text-center'>
-            <h2 className='text-white text-3xl'>Total {reviews.length} reviews</h2>
+        <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             {
                 reviews.map(review => <ReviewCard
                     key={review._id}
