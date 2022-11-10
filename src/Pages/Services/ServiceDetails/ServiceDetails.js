@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Reviews from '../Reviews/Reviews';
+import ShowReviews from '../Reviews/ShowReviews';
 
 const ServiceDetails = () => {
     const { _id, img, price, title, details } = useLoaderData();
@@ -18,6 +19,9 @@ const ServiceDetails = () => {
             </div>
             <div className='bg-black py-16'>
                 <Reviews></Reviews>
+            </div>
+            <div className='bg-black py-6'>
+                <ShowReviews id={_id}></ShowReviews>
             </div>
         </div>
     );

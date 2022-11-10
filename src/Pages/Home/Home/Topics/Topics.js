@@ -11,7 +11,7 @@ const Topics = () => {
     }, [])
     return (
         <div>
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-10 lg:ml-20'>
                 {
                     topics.map(topic => <TopicsCard
                         key={topic._id}
