@@ -4,7 +4,7 @@ import { toast, ToastContainer } from 'react-toastify';
 const AddServices = () => {
     const [insertServices, setInsertServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/services')
+        fetch('https://awesome-clicks-server.vercel.app/services')
             .then(res => res.json())
             .then(data => setInsertServices(data))
     }, []);
@@ -23,7 +23,7 @@ const AddServices = () => {
             img,
 
         }
-        fetch('http://localhost:5000/service', {
+        fetch('https://awesome-clicks-server.vercel.app/service', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -5,7 +5,7 @@ import TopicsCard from './TopicsCard';
 const Topics = () => {
     const [topics, setTopics] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/topics')
+        fetch('https://awesome-clicks-server.vercel.app/topics')
             .then(res => res.json())
             .then(data => setTopics(data))
     }, [])

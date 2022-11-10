@@ -10,7 +10,7 @@ const MyReviews = () => {
     console.log(myReviews);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?email=${user?.email}`, {
+        fetch(`https://awesome-clicks-server.vercel.app/reviews?email=${user?.email}`, {
             headers: {
                 authorization: `Bearer ${localStorage.getItem('reviewToken')}`
             }
@@ -25,7 +25,7 @@ const MyReviews = () => {
         const proceed = window.confirm('Are you sure to delete?');
         if (proceed) {
 
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://awesome-clicks-server.vercel.app/reviews/${id}`, {
 
                 method: 'DELETE'
             })
