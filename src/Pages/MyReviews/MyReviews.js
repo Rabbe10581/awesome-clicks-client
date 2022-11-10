@@ -34,7 +34,7 @@ const MyReviews = () => {
                     console.log(data);
                     if (data.deletedCount > 0) {
                         alert('You have deleted successfully');
-                        const remaining = myReviews.filter(order => order._id !== id);
+                        const remaining = myReviews.filter(odr => odr._id !== id);
                         setMyReviews(remaining);
                     }
                 })

@@ -4,10 +4,12 @@ import Blog from "../../Pages/Blog/Blog";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
 import MyReviews from "../../Pages/MyReviews/MyReviews";
+import AddServices from "../../Pages/Services/AddServices/AddServices";
 import ShowReviews from "../../Pages/Services/Reviews/ShowReviews";
 import ServiceDetails from "../../Pages/Services/ServiceDetails/ServiceDetails";
 import Services from "../../Pages/Services/Services";
 import SignUp from "../../Pages/SignUp/SignUp";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -33,7 +35,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/myreviews',
-                element: <MyReviews></MyReviews>
+                element: <PrivateRoute><MyReviews></MyReviews></PrivateRoute>
+            },
+            {
+                path: '/addservices',
+                element: <PrivateRoute><AddServices></AddServices></PrivateRoute>
             },
             {
                 path: '/blog',
