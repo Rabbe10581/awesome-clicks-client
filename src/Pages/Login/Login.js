@@ -1,11 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import loginImg from "../../Assets/login/login.jpg"
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import SocialLogIn from '../Shared/SocialLogIn/SocialLogIn';
 
 const Login = () => {
-    const { login } = useContext(AuthContext);
+    const { user, login } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathName || "/"
 
     const handleLogIn = event => {
         event.preventDefault();
@@ -20,7 +23,13 @@ const Login = () => {
                 console.log(user);
             })
             .then(err => console.error(err))
+
     }
+    useEffect(() => {
+        if (user) {
+            navigate(from, { replace: true })
+        }
+    }, [user, from, navigate])
 
     return (
         <div className="hero w-full my-20">
