@@ -1,15 +1,14 @@
 import React from 'react';
 
-const MyReviewsCard = ({ myReview }) => {
+const MyReviewsCard = ({ myReview, handleDelete }) => {
+    console.log(myReview);
+    const { reviewText, serviceName, email } = myReview;
     return (
         <div className="card w-96 bg-neutral text-neutral-content">
             <div className="card-body items-center text-center">
-                <h2 className="card-title">Cookies!</h2>
-                <p>We are using cookies for no reason.</p>
-                <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Accept</button>
-                    <button className="btn btn-ghost">Deny</button>
-                </div>
+                <h2 className="card-title">{serviceName}</h2>
+                <p className='bg-slate-500 p-5 rounded-md'>{reviewText}</p>
+                <p>{email}</p>
             </div>
         </div>
     );

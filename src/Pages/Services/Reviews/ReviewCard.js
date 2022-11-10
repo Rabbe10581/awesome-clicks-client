@@ -11,7 +11,7 @@ const ReviewCard = ({ review }) => {
         <div className="card w-96 bg-neutral text-center text-neutral-content">
             <div className="card-body items-center text-center">
                 <h2 className="card-title">{serviceName}</h2>
-                <p>{reviewText}</p>
+                <p className='bg-slate-500 p-5 rounded-md'>{reviewText}</p>
                 <p>{email}</p>
                 <img src={user?.photoURL} alt="" />
                 {/* <button className='btn btn-warning text-white'>X</button> */}
