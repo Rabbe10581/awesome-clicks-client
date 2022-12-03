@@ -1,19 +1,24 @@
 Awesome-Clicks (Photography Website)
-# https://my-awesome-clicks.web.app/
+<br/>
+https://my-awesome-clicks.web.app/
+<br/>
+<br/>
+---Used packages:---
+<br/>
 
-
- Used packages:
- #React
- #React-Router_Dom
- #Tailwind CSS
- #Daisy UI
- #React Photo
- #express
- #Node
+* React JS,
+* React Router Dom,
+* Tailwind CSS,
+* Firebase,
+* Daisy UI,
+* React Photo,
+* Express JS,
+* Node JS,
+* React Toastify.
+* MongoDB. 
 
  Images Collected from:
- #Collected from google
- #Imgbb
+ <br/>
+ * Collected from google
+ * Imgbb
 
- DataBase
- #mongoDB
